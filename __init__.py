@@ -41,7 +41,6 @@ submit.click()
 
 # //button[@name='republish']
 
-
-sleep(10)
+sleep(3600)
 
 driver.quit()
