@@ -35,7 +35,7 @@ def main():
     driver.get('https://www.willhaben.at/iad/myprofile/myadverts')
 
     driver.maximize_window()
-    driver.implicitly_wait(1)
+    driver.implicitly_wait(60)
 
     config = configparser.ConfigParser()
     config.read('config.ini')
