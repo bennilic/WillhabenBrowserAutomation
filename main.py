@@ -83,30 +83,20 @@ def main():
             republish = driver.find_element(By.XPATH, '//button[@name="republish"][1]')
             republish.click()
 
-            sleep(0.5)
-
             item_name = driver.find_element(By.ID, 'heading')
             logger.info("Republish Item... {s}", s=item_name.get_attribute("value"))
 
             submit = driver.find_element(By.XPATH, '//button[@data-testid="send-button"]')
             submit.click()
 
-            sleep(0.5)
-
             submit = driver.find_element(By.XPATH, '//button[@data-testid="submitButton"]')
             submit.click()
-
-            sleep(0.5)
 
             submit = driver.find_element(By.XPATH, '//button[@data-testid="submit-button"]')
             submit.click()
 
-            sleep(0.5)
-
             meine_anzeigen = driver.find_element(By.LINK_TEXT, "Meine Anzeigen")
             meine_anzeigen.click()
-
-            sleep(0.5)
         except:
             logger.warning("Something went wrong during republishing...")
             is_item_available = False
